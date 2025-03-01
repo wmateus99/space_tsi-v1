@@ -5,12 +5,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Links dos iframes correspondentes a cada item do menu
     const links = {
-        'Início': './_pags/inicio.html',
-        'Atividades': './_pags/atividade.html',
-        'Textos/Digitar': './_pags/txt_digitar.html',
-        'Auxiliares': './_pags/auxiliares.html',
+        'Início': './_pags/index.html',
+        'Atividades': './_pags/atividade/index.html',
+        'Textos/Digitar': './_pags/txt_digitar/index.html',
+        'Auxiliares': './_pags/auxiliares/index.html',
         'Prova/Final': 'https://extsi.netlify.app/forms/menu.html',
-        'Games': './_pags/games.html'
+        'Games': './_pags/games/index.html'
     };
 
     // Função para atualizar o src do iframe
