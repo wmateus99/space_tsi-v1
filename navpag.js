@@ -4,7 +4,7 @@
 const clickGameDig = document.getElementById('gameDig');
 
 clickGameDig.addEventListener('click', function() {
-    window.location.href = '/_pags/_games/_digitacao/digitacao.html';
+    window.location.href = '/_pags/games/_digitacao/digitacao.html';
 });
 
 // Página TsiFlix
