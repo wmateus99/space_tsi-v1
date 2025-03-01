@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prática de Digitação</title> <!-- Alterado para 'Prática de Digitação' -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sub-conteiner">
+            <h1>Prática de Digitação</h1> <!-- Alterado para 'Prática de Digitação' -->
+            <div id="game-info">
+                <p><span class="sub-title">Pontuação:</span> <span id="score">0</span></p>
+                <p><span class="sub-title">Nível:</span> <span id="level">1</span></p>
+            </div>
+            <div id="word-display" class="word-display"></div>
+            <input type="text" id="word-input" class="word-input" placeholder="Digite a palavra" autocomplete="off">
+            <div class="button-container">
+                <button id="start-button">Iniciar</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+</body>
+</html>
