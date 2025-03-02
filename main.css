@@ -15,7 +15,6 @@ body {
 }
 
 .menu-lateral {
-    position: relative;
     width: 60px;
     transition: .5s;
     overflow: hidden;
@@ -126,4 +125,31 @@ iframe {
 
 .tsi {
     max-width: 300px;
+}
+
+
+.aviso {
+    display: none;
+}
+@media screen and (max-width: 500px) {
+    .menu-lateral {
+        display: none;
+    }
+    iframe {
+        display: none;
+    }
+
+    body {
+        display: block;
+    }
+
+    .aviso {
+        display: block;
+        font-size: 20px;
+        color: #fff;
+        text-align: center;
+        margin-top: 30%;
+        width: 100%;
+        padding: 0 50px;
+    }
 }
