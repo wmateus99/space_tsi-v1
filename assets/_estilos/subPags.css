@@ -45,7 +45,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: 80%;
     margin-bottom: 40px;
 }
@@ -129,11 +129,11 @@ header {
 @keyframes anima_scroll  {
     0% {
         opacity: 0;
-        transform: translate(-150px);
+        /* transform: translate(-150px); */
     }
 
     100% {
         opacity: 1;
-        transform: translate(0px);
+        /* transform: translate(0px); */
     }
 }
