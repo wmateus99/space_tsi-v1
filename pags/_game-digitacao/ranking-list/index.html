@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link da fonte está na descrição -->
+    <!-- Font Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Ranking List</title>
+
+    <script>
+        // Função para calcular os dias restantes
+        function calcularDiasRestantes() {
+            const dataFinal = new Date("2025-06-24"); // Data de fim
+            const dataAtual = new Date(); // Data atual
+            const diferençaEmMilissegundos = dataFinal - dataAtual; // Diferença entre as datas em milissegundos
+            const diasRestantes = Math.ceil(diferençaEmMilissegundos / (1000 * 60 * 60 * 24)); // Converte milissegundos para dias
+            return diasRestantes;
+        }
+
+        // Exibe a mensagem na página
+        function exibirMensagem() {
+            const dias = calcularDiasRestantes();
+            const mensagem = `O ranking reseta em ${dias} dias!`;
+            document.getElementById("mensagem").innerText = mensagem;
+        }
+
+        // Chama a função para exibir a mensagem assim que a página for carregada
+        window.onload = exibirMensagem;
+    </script>
+</head>
+
+<body>
+
+
+
+
+    <div class="card">
+
+        <div class="card-title">
+            <h1>Ranking</h1>
+            <div id="mensagem" style="font-size: 12px;"></div>
+        </div>
+
+        <div class="card-body">
+
+
+            <ul class="list">
+                <li class="list-item">
+                    <div class="list-item-header">
+                        <span class="list-item-header-badge">1º</span>
+                        <img src="img/character-1.png" alt="" class="list-item-icon">
+                    </div>
+                    <div class="list-item-body">
+                        <span class="list-item-title">Wesley Rafael</span>
+                        <span class="list-item-subtitle">Nível / 105</span>
+                        <div class="list-item-progress-bar">
+                            <span class="progress" style="width: 80%;"></span>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-item">
+                    <div class="list-item-header">
+                        <span class="list-item-header-badge">2º</span>
+                        <img src="img/character-2.png" alt="" class="list-item-icon">
+                    </div>
+                    <div class="list-item-body">
+                        <span class="list-item-title">Jose Riquelme</span>
+                        <span class="list-item-subtitle">Nível / 15</span>
+                        <div class="list-item-progress-bar">
+                            <span class="progress" style="width: 65%;"></span>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-item">
+                    <div class="list-item-header">  
+                        <span class="list-item-header-badge">3º</span>
+                        <img src="img/character-3.png" alt="" class="list-item-icon">
+                    </div>
+                    <div class="list-item-body">
+                        <span class="list-item-title">Paulo Ricardo</span>
+                        <span class="list-item-subtitle">Nível / 12</span>
+                        <div class="list-item-progress-bar">
+                            <span class="progress" style="width: 40%;"></span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
