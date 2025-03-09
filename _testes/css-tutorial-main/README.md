@@ -1,2 +1,0 @@
-# css-tutorial
-css-tutorial

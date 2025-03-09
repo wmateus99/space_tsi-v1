@@ -1,0 +1,44 @@
+*::selection {
+    background-color: aqua;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("../../../../img/fundo.png");
+    background-size: 100%;
+}
+
+.subs, .main, .footer, .respostas {
+    background: #fff;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 20px;
+    max-width: 794px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    margin: 2% 0;
+    color: #fff;
+}
+
+.avisos, .objetivos {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.conteiner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+
+}
+
+.instrucoes ol li {
+    margin-bottom: 30px;
+    text-align: justify;
+    margin-right: 10%;
+}

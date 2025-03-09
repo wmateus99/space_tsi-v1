@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/navMenu.css">
+    <link rel="stylesheet" href="../pags.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <title>Space Tsi</title>
+    <link rel="shortcut icon" href="/img/st-fav.png" type="image/x-icon">
+<style>
+    .box-card {
+        width: 80%;
+    }
+    .card-pag {
+        gap: 20px;
+        width: 100%;
+        display: grid;
+        padding: 30px 0px;
+        align-items: center;
+        margin-bottom: 15px;
+        transition: .3s ease-in;
+        border-bottom: 2px solid #fff;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .card-pag:hover {
+        scale: 1.02;
+        background: rgba(255, 255, 255, 0.1); /* Cor semitransparente */
+        backdrop-filter: blur(2px);
+    }
+    .card-pag .btn-acessar {
+        cursor: pointer;
+    }
+    .c1 {
+        margin-left: 5px;
+    }
+    .c2, .c3 {
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+
+    <input type="checkbox" name="" id="expandir" style="display: none;">
+    <label class="btn-expandir" for="expandir">
+        <i class="ri-menu-line"></i>
+    </label>
+
+    <nav class="nav-bar">
+        <div class="logo">
+            <img class="logoPQ" src="/img/logo_pequena.png" alt="Logo da Space Tsi">
+            <img class="logoGD" src="/img/logo_grande.png" alt="Logo Space Tsi">
+        </div>
+
+        <div class="nav-list">
+            <div class="list-menu inicio">
+                <i class="ri-home-9-fill"></i>
+                <span class="nav-text-menu">Início</span>
+            </div>
+            <div class="list-menu atividades ativo">
+                <i class="ri-file-text-fill"></i>
+                <span class="nav-text-menu">Atividades</span>
+            </div>
+            <div class="list-menu textos">
+                <i class="ri-keyboard-box-fill"></i>
+                <span class="nav-text-menu">Textos/Digitar</span>
+            </div>
+            <div class="list-menu auxiliares">
+                <i class="ri-import-fill"></i>
+                <span class="nav-text-menu">Auxiliares</span>
+            </div>
+            <div class="list-menu provaFinal">
+                <i class="ri-file-edit-fill"></i>
+                <span class="nav-text-menu">Prova/Final</span>
+            </div>
+            <div class="list-menu games">
+                <i class="ri-gamepad-fill"></i>
+                <span class="nav-text-menu">Games</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- DIVISÂO -->
+
+    <header class="header-title">
+        <div class="title">
+            <h1>Atividades de Photoshop</h1>
+        </div>
+    </header>
+
+    <div class="conteiner">
+        <div class="box-card">
+            
+            <div class="card-pag">
+                <div class="c1">
+                    <h2>Ajustando Imagens</h2>
+                </div>
+                <div class="c2">
+                    <span class="descricao">Básico</span>
+                </div>
+                <div class="c3">
+                    <div class="btn-acessar">
+                        <a href="./_pags-atividade/box-photoshop/Atividade_Photoshop_AjustandoImagens.pdf"><span>Acessar</span></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card-pag">
+                <div class="c1">
+                    <h2>Texto 3D</h2>
+                </div>
+                <div class="c2">
+                    <span class="descricao">Básico</span>
+                </div>
+                <div class="c3">
+                    <div class="btn-acessar">
+                        <a href="./_pags-atividade/box-photoshop/photoshop-texto3d.pdf"><span>Acessar</span></a>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // HOME
+        const div1 = document.querySelector('.inicio');
+        div1.addEventListener('click', function() {
+            window.location.href = "/index.html";
+        });
+
+        // ATIVIDADES
+        const div2 = document.querySelector('.atividades');
+        div2.addEventListener('click', function() {
+            window.location.href = "../atividades.html";
+        });
+
+        // TEXTOS / DIGITAR
+        const div3 = document.querySelector('.textos');
+        div3.addEventListener('click', function() {
+            window.location.href = "../textos.html";
+        });
+
+        // AUXILIARES
+        const div4 = document.querySelector('.auxiliares');
+        div4.addEventListener('click', function() {
+            window.location.href = "../auxiliares.html";
+        });
+
+        // PROVAFINAL
+        const div5 = document.querySelector('.provaFinal');
+        div5.addEventListener('click', function() {
+            window.location.href = "../provaFinal.html";
+        });
+
+        // GAMES
+        const div6 = document.querySelector('.games');
+        div6.addEventListener('click', function() {
+            window.location.href = "../games.html";
+        });
+    });
+</script>
+</body>
+</html>

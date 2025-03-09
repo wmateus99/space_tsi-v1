@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/navMenu.css">
+    <link rel="stylesheet" href="./pags.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <title>Space Tsi</title>
+    <link rel="shortcut icon" href="../img/st-fav.png" type="image/x-icon">
+</head>
+<body>
+
+    <input type="checkbox" name="" id="expandir" style="display: none;">
+    <label class="btn-expandir" for="expandir">
+        <i class="ri-menu-line"></i>
+    </label>
+
+    <nav class="nav-bar">
+        <div class="logo">
+            <img class="logoPQ" src="../img/logo_pequena.png" alt="Logo da Space Tsi">
+            <img class="logoGD" src="../img/logo_grande.png" alt="Logo Space Tsi">
+        </div>
+
+        <div class="nav-list">
+            <div class="list-menu inicio">
+                <i class="ri-home-9-fill"></i>
+                <span class="nav-text-menu">Início</span>
+            </div>
+            <div class="list-menu atividades ativo">
+                <i class="ri-file-text-fill"></i>
+                <span class="nav-text-menu">Atividades</span>
+            </div>
+            <div class="list-menu textos">
+                <i class="ri-keyboard-box-fill"></i>
+                <span class="nav-text-menu">Textos/Digitar</span>
+            </div>
+            <div class="list-menu auxiliares">
+                <i class="ri-import-fill"></i>
+                <span class="nav-text-menu">Auxiliares</span>
+            </div>
+            <div class="list-menu provaFinal">
+                <i class="ri-file-edit-fill"></i>
+                <span class="nav-text-menu">Prova/Final</span>
+            </div>
+            <div class="list-menu games">
+                <i class="ri-gamepad-fill"></i>
+                <span class="nav-text-menu">Site/Terceiro</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- DIVISÂO -->
+
+    <header class="header-title">
+        <div class="title">
+            <h1>Atividades</h1>
+            <div class="line"></div>
+        </div>
+    </header>
+
+    <div class="conteiner">
+        <div class="box-left">
+            
+            <div class="card">
+                <div class="card-box">
+                    <i class="ri-vip-crown-fill"></i>
+                    <div class="area-title">
+                        <h2>Atividade Avaliativa Profissional</h2>
+                        <p>Pratique para melhorar ainda mais as suas habilidades!</p>
+                    </div>
+                </div> 
+                <div class="area-button">
+                    <button id="aap-bs">Básico</button>
+                    <button id="inicioMouse" style="cursor: not-allowed;"><apan class="indisp">Avançado</apan></button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-box">
+                    <i class="ri-vip-crown-fill"></i>
+                    <div class="area-title">
+                        <h2>Excel</h2>
+                        <p>É so praticando que você vai conseguir absorver/aprender todos os conteúdo das aulas!</p>
+                    </div>
+                </div> 
+                <div class="area-button">
+                    <button id="att-ex-bs">Básico</button>
+                    <button id="inicioMouse">Avançado</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-box">
+                    <i class="ri-vip-crown-fill"></i>
+                    <div class="area-title">
+                        <h2>Word</h2>
+                        <p>Vamos lá editar alguns textos? mostre que você domina o Word!</p>
+                    </div>
+                </div> 
+                <div class="area-button">
+                    <button id="att-wrd">Básico</button>
+                    <button id="inicioMouse" style="cursor: not-allowed;"><apan class="indisp">Avançado</apan></button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-box">
+                    <i class="ri-vip-crown-fill"></i>
+                    <div class="area-title">
+                        <h2>Windows</h2>
+                        <p>Vá em presente e navegue pelo Windows com facilidade!</p>
+                    </div>
+                </div> 
+                <div class="area-button">
+                    <button id="att-win">Básico</button>
+                    <button id="inicioMouse" style="cursor: not-allowed;"><apan class="indisp">Avançado</apan></button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-box">
+                    <i class="ri-vip-crown-fill"></i>
+                    <div class="area-title">
+                        <h2>Photoshop</h2>
+                        <p>É hora de criar e editar imagens com Photoshop!</p>
+                    </div>
+                </div> 
+                <div class="area-button">
+                    <button id="att-phsp">Básico</button>
+                    <button id="inicioMouse" style="cursor: not-allowed;"><apan class="indisp">Avançado</apan></button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-box">
+                    <i class="ri-vip-crown-fill"></i>
+                    <div class="area-title">
+                        <h2>PowerPoint</h2>
+                        <p>Prepare apresentações incríveis com PowerPoint!</p>
+                    </div>
+                </div> 
+                <div class="area-button">
+                    <button id="att-pwp">Básico</button>
+                    <button id="inicioMouse" style="cursor: not-allowed;"><apan class="indisp">Avançado</apan></button>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="box-right"></div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // HOME
+        const div1 = document.querySelector('.inicio');
+        div1.addEventListener('click', function() {
+            window.location.href = "../index.html";
+        });
+
+        // ATIVIDADES
+        // const div2 = document.querySelector('.atividades');
+        // div2.addEventListener('click', function() {
+        //     window.location.href = "./atividades.html";
+        // });
+
+        // TEXTOS / DIGITAR
+        const div3 = document.querySelector('.textos');
+        div3.addEventListener('click', function() {
+            window.location.href = "./textos.html";
+        });
+
+        // AUXILIARES
+        const div4 = document.querySelector('.auxiliares');
+        div4.addEventListener('click', function() {
+            window.location.href = "./auxiliares.html";
+        });
+
+        // PROVA FINAL
+        const div5 = document.querySelector('.provaFinal');
+        div5.addEventListener('click', function() {
+            window.location.href = "./provaFinal.html";
+        });
+
+        // GAMES
+        const div6 = document.querySelector('.games');
+        div6.addEventListener('click', function() {
+            window.location.href = "./games.html";
+        });
+
+
+
+        // ATT Avaliativa / Básico
+        const Att1 = document.querySelector('#aap-bs');
+        Att1.addEventListener('click', function() {
+            window.location.href = "./_ativ-basico/ati-av-pr.html";
+        });
+        // ATT Excel / Básico
+        const Att2 = document.querySelector('#att-ex-bs');
+        Att2.addEventListener('click', function() {
+            window.location.href = "./_ativ-basico/excel.html";
+        });
+        // ATT Word / Básico
+        const Att3 = document.querySelector('#att-wrd');
+        Att3.addEventListener('click', function() {
+            window.location.href = "./_ativ-basico/word.html";
+        });
+        // ATT Windows / Básico
+        const Att4 = document.querySelector('#att-win');
+        Att4.addEventListener('click', function() {
+            window.location.href = "./_ativ-basico/windows.html";
+        });
+        // ATT Photoshop / 
+        const Att5 = document.querySelector('#att-phsp');
+        Att5.addEventListener('click', function() {
+            window.location.href = "./_ativ-basico/photoshop.html";
+        });
+        // ATT PowerPoint / 
+        const Att6 = document.querySelector('#att-pwp');
+        Att6.addEventListener('click', function() {
+            window.location.href = "./_ativ-basico/powerpoint.html";
+        });
+    });
+</script>
+</body>
+</html>

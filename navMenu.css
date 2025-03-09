@@ -1,0 +1,149 @@
+.nav-bar {
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 60px;
+    height: 100vh;
+    position: fixed;
+    overflow: hidden;
+    transition: .5s ease;
+    background: #135D6D;
+    box-shadow: 3px 0px #fff;
+}
+
+/* FORMATAÇÃO DA LOGO */
+.logo {
+    width: 100%;
+    height: 170px;
+    position: relative;
+    /* background-color: chocolate; */
+}
+.logo .logoPQ {
+    left: 0;
+    opacity: 1;
+    width: 50px;
+    height: 50px;
+    transition: .5s;
+    position: absolute;
+    transform: translate(4px, 20px);
+}
+.logo .logoGD {
+    left: 0;
+    opacity: 0;
+    width: 235px;
+    height: 120px;
+    transition: .5s;
+    position: absolute;
+    transform: translate(250px, 20px);
+}
+
+/* MENU TEXT - BUTTONS */
+
+.nav-list {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.list-menu {
+    height: 60px;
+    display: flex;
+    transition: .23s;
+    cursor: pointer;
+    align-items: center;
+}
+.list-menu i {
+    font-size: 35px;
+    transform: translate(10px, 0px);
+}
+.list-menu span {
+    opacity: 0;
+    transition: .5s;
+    font-size: 18px;
+    transform: translate(130px, 0px);
+}
+#btn-expandir {
+    display: none;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 500px) {
+    body {
+        padding-top: 100px;
+    }
+    .btn-expandir {
+        display: block;
+        right: 30px;
+        top: 35px;
+        cursor: pointer;
+        font-size: 30px;
+        position: fixed;
+        z-index: 2;
+    }
+    #expandir:checked ~ .nav-bar {
+        height: 400px;
+    }
+    .nav-bar {
+        width: 100%;
+        height: 100px;
+        box-shadow: 0px 3px #fff;
+    }
+    .list-menu span {
+        opacity: 1;
+        transform: translate(30px, 0px);
+    }
+    .logo {
+        height: 140px;
+    }
+    .logo .logoPQ {
+        opacity: 0;
+        transition: 0s;
+        background-color: aqua;
+        transform: translate(-80px, 20px);
+    }
+    .logo .logoGD {
+        opacity: 1;
+        width: 200px;
+        height: 100px;
+        transform: translate(0px, 0px);
+    }
+}
+
+
+@media (min-width: 500px) {
+    /* HOVER's */
+body {
+    padding-left: 70px;
+}
+.btn-expandir {
+    display: none;
+}
+.nav-bar:hover {
+    width: 250px;
+}
+
+.nav-bar:hover .logoGD {
+    opacity: 1;
+    transform: translate(10px, 20px);
+}
+
+.nav-bar:hover .logoPQ {
+    opacity: 0;
+    transform: translate(-80px, 20px);
+}
+.nav-bar:hover .list-menu span {
+    opacity: 1;
+    transform: translate(30px, 0px);
+}
+.list-menu:hover {
+    background: #166a7d;
+}
+.ativo {
+    background: #166a7d;
+}
+.content {
+    margin-left: 70px;
+}
+}

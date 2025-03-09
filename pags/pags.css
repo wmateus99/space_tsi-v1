@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    box-sizing: border-box;
+    font-family: "Comfortaa", sans-serif;
+}
+
+body {
+    padding-bottom: 50px;
+    background-size: 100%;
+    background-image: url("/img/fundo.png");
+}
+
+.header-title {
+    width: 100%;
+    height: 120px;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    font-size: 16px;
+}
+
+.line {
+    width: 100%;
+    border: 1px solid #fff;
+}
+
+.conteiner {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.box-left {
+    display: flex;
+    gap: 20px;
+    width: 90%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+
+.card {
+    cursor: cell;
+    width: 330px;
+    height: 200px;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    border-radius: 20px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-shadow: 1px 1px 4px #000;
+    background: linear-gradient(360deg, #196F82 0%, #25A3BF 100%);
+
+
+    animation: anima_scroll linear;
+    animation-timeline: view();
+    animation-range: entry 00% cover 10%;
+}
+
+.card-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.card i {
+    font-size: 70px;
+    display: none;
+    text-align: center;
+    user-select: none;
+    margin-right: 10px;
+}
+.area-title p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #c6c6c6;
+}
+.area-button {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+.area-button button {
+    background: linear-gradient(360deg, #196F82 0%, #25A3BF 100%);
+    width: 40%;
+    height: 40px;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    border-radius: 30px;
+    user-select: none;
+    transition: .1s;
+}
+.area-button button:active {
+    scale: 1.1;
+}
+.area-button button:hover {
+    background: linear-gradient(360deg, #166374 0%, #2295af 100%);
+}
+
+
+.box-right {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+@keyframes anima_scroll  {
+    0% {
+        opacity: 0;
+        /* transform: translate(-150px); */
+    }
+
+    100% {
+        opacity: 1;
+        /* transform: translate(0px); */
+    }
+}
+
+/* Rectangle 19 */
+
+
+.indisp {
+    color: red;
+    text-decoration: line-through;
+}
