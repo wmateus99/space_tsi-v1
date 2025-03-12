@@ -1,0 +1,47 @@
+.notepad {
+    top: 50px;
+    width: 80%;
+    height: 80vh;
+    display: none;
+    display: none;
+    padding: 20px;
+    position: fixed;
+    max-width: 600px;
+    border-radius: 10px;
+    flex-direction: column;
+    background-color: #fff;
+    border: 5px solid rgb(0, 0, 0);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.header button:hover {
+    background-color: #0056b3;
+}
+textarea {
+    width: 100%;
+    height: 100%;
+    border: none;
+    resize: none;
+    font-size: 16px;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none; /* Remove a borda de seleção */
+}
+.header .clear-button {
+    background-color: #dc3545;
+}
+.header .clear-button:hover {
+    background-color: #c82333;
+}

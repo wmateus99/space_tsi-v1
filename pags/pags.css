@@ -57,7 +57,7 @@ body {
 .card {
     cursor: cell;
     width: 330px;
-    height: 200px;
+    height: 180px;
     display: flex;
     padding: 20px;
     align-items: center;
@@ -100,7 +100,7 @@ body {
     background: linear-gradient(360deg, #196F82 0%, #25A3BF 100%);
     width: 40%;
     height: 40px;
-    margin-top: 20px;
+    margin-top: 10px;
     cursor: pointer;
     border: none;
     font-size: 16px;

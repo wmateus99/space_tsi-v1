@@ -1,0 +1,77 @@
+*::selection {
+    background-color: aqua;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("/img/fundo.png");
+    background-size: 100%;
+    position: relative;
+}
+
+.subs, .main, .footer, .respostas {
+    background: #fff;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 20px;
+    max-width: 794px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    margin: 2% 0;
+    color: #fff;
+}
+
+.avisos, .objetivos {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.conteiner {
+    display: flex;
+    z-index: -1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+
+}
+
+.instrucoes ol li {
+    margin-bottom: 30px;
+    text-align: justify;
+    margin-right: 10%;
+}
+
+.respostas {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    display: none;
+}
+.iconResposta {
+    position: fixed;
+    left: 20px;
+    font-size: 50px;
+    bottom: 20px;
+    color: gold;
+}
+.fecharMenuResposta {
+    top: 0px;
+    backdrop-filter: blur(15px);
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+#menuResposta {
+    display: none;
+}
+#menuResposta:checked ~ .notepad {
+    display: flex;
+}
+#menuResposta:checked ~ .fecharMenuResposta {
+    display: block;
+}

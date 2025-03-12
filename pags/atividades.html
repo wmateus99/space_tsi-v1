@@ -80,6 +80,19 @@
                 <div class="card-box">
                     <i class="ri-vip-crown-fill"></i>
                     <div class="area-title">
+                        <h2>Revisão</h2>
+                        <p>É hora de relembrar tudo que já foi visto durante seu percuso!</p>
+                    </div>
+                </div> 
+                <div class="area-button">
+                    <button id="att-rv">Básico</button>
+                    <button id="inicioMouse" style="cursor: not-allowed;"><apan class="indisp">Avançado</apan></button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-box">
+                    <i class="ri-vip-crown-fill"></i>
+                    <div class="area-title">
                         <h2>Excel</h2>
                         <p>É so praticando que você vai conseguir absorver/aprender todos os conteúdo das aulas!</p>
                     </div>
@@ -219,6 +232,12 @@
         const Att6 = document.querySelector('#att-pwp');
         Att6.addEventListener('click', function() {
             window.location.href = "./_ativ-basico/powerpoint.html";
+        });
+
+        // ATT Revisão / Básico
+        const Att7 = document.querySelector('#att-rv');
+        Att7.addEventListener('click', function() {
+            window.location.href = "./_ativ-basico/revisao.html";
         });
     });
 </script>

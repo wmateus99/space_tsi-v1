@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style-atividade.css">
+    <link rel="stylesheet" href="blocodenotas.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" integrity="sha512-XcIsjKMcuVe0Ucj/xgIXQnytNwBttJbNjltBV18IOnru2lDPe9KRRyvCXw6Y5H415vbBLRm8+q6fmLUU7DfO6Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Página de Atividade/Arquivo</title>
+    <link rel="shortcut icon" href="/img/st-fav.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1 class="title">Atividade de Revisão</h1>
+    </header>
+
+    <div class="conteiner">
+
+        <section class="subs">
+            <h2 class="sub-title">Internet - 01</h2>
+            <div class="avisos">
+                <i class="bi bi-exclamation-circle-fill" style="color: red;"></i>
+                <strong>Aviso: </strong>
+                <span>
+                    Caso ja tenha feito esta atividade, não tem nenhum problema em repetir todo o processo novamente, isso so irá te ajudar a melhorar ainda mais o seu desempenho, como também vai ajudar a relembrar alguns conceitos. Lembre-se, <strong>a repetição e prática, torna você melhor!</strong>
+                </span>
+            </div>
+            <div class="objetivos">
+                <i class="bi bi-exclamation-circle-fill" style="color: orange;"></i>
+                <strong>Objetivo: </strong>
+                <span>
+                    Esta atividade tem como objetivo ajudar a entender os conceitos básicos sobre a Internet e como usá-la para navegar, pesquisar e acessar informações de forma eficiente.
+                </span>
+            </div>
+        </section>
+
+        <section class="main">
+            <h3 class="title-atividade">Conectando-se à Internet</h3>
+
+            <ul class="instrucoes">
+                <ol>
+                    <li>Vá até sua Área de Trabalho, e localize o Google Chrome, após encontrá-lo, clique duas vezes sobre o ícone para poder abrir.</li>
+                    <li>Digite "www.cursoemvideo.com" na barra de endereço e pressione Enter</li>
+                    <li>Procure o menu “Sobre”, localizado na parte superior no centro, ao localizar, clique sobre esse menu.</li>
+                    <li>Observe as informações sobre a página e em seguida siga para a próxima etapa.</li>
+                </ol>
+            </ul>
+            <h3 class="title-atividade">Navegando em notícias</h3>
+            <ul class="instrucoes">
+                <ol>
+                    <li>Clique na barra de endereço e digite “g1.globo.com”.</li>
+                    <li>Digite "www.cursoemvideo.com" na barra de endereço e pressione Enter</li>
+                    <li>Observe as principais notícias. Clique em pelo menos 1 matéria e leia um pouco sobre a notícia. Depois, anote os principais pontos sobre a notícia.</li>
+                    <li>Para acessar o bloco de notas, localize um ícone no canto inferior esquerdo.</li>
+                    <li>Após terminar, mostre as anotações ao seu professor/instrutor.</li>
+                </ol>
+            </ul>
+        </section>
+
+        <section class="main">
+            <h3 class="title-atividade">Pesquisa na Web</h3>
+
+            <ul class="instrucoes">
+                <ol>
+                    <li>No campo de pesquisa do Google, digite "turismo e viagem" e aperte Enter.</li>
+                    <li>Clique na opção “Notícias” e depois em “Imagens” para encontrar fotos sobre viagens e destinos turísticos.</li>
+                    <li>Anote 5 destinos turísticos interessantes que encontrou.</li>
+                </ol>
+            </ul>
+        </section>
+
+        <section class="main">
+            <h3 class="title-atividade">Navegação e Links</h3>
+
+            <ul class="instrucoes">
+                <ol>
+                    <li>Pesquise sobre um tema de seu interesse: Acesse "www.youtube.com" e pesquise sobre "culinária mexicana".</li>
+                    <li>Navegue pelos diversos vídeo e clique em um deles, altere a visualização para "Modo Teatro".</li>
+                    <li>Curta o vídeo e adicione-o à sua lista de "Favoritos".</li>
+                </ol>
+            </ul>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <section class="footer">
+            <div class="parabens">
+                <span>
+                    Se você finalizou esta atividade com o mímimo de ajuda possível, você está de parabéns! Continue praticando e melhorando.
+                </span>
+            </div>
+        </section>
+
+        <input type="checkbox" name="" id="menuResposta">
+        <label class="iconResposta" for="menuResposta"><i class="ri-file-edit-fill"></i></label>
+        <label class="fecharMenuResposta" for="menuResposta"></label>
+
+        <div class="notepad">
+            <div class="header">
+                <h2>Bloco de Notas</h2>
+                <div>
+                    <button onclick="salvarNota()">Salvar</button>
+                    <button class="clear-button" onclick="limparNota()">Limpar</button>
+                </div>
+            </div>
+            <textarea id="textoNota" placeholder="Escreva suas notas aqui..."></textarea>
+        </div>
+
+    </div>
+
+    <script>
+        function salvarNota() {
+            const texto = document.getElementById('textoNota').value;
+            localStorage.setItem('nota', texto);
+            alert('Nota salva com sucesso!');
+        }
+
+        function limparNota() {
+            document.getElementById('textoNota').value = '';
+            localStorage.removeItem('nota');
+        }
+
+        window.onload = function() {
+            const notaSalva = localStorage.getItem('nota');
+            if (notaSalva) {
+                document.getElementById('textoNota').value = notaSalva;
+            }
+        }
+    </script>
+</body>
+</html>

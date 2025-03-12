@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style-atividade.css">
+    <link rel="stylesheet" href="blocodenotas.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" integrity="sha512-XcIsjKMcuVe0Ucj/xgIXQnytNwBttJbNjltBV18IOnru2lDPe9KRRyvCXw6Y5H415vbBLRm8+q6fmLUU7DfO6Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Página de Atividade/Arquivo</title>
+    <link rel="shortcut icon" href="/img/st-fav.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1 class="title">Atividade de Revisão</h1>
+    </header>
+
+    <div class="conteiner">
+
+        <section class="subs">
+            <h2 class="sub-title">Internet - 02</h2>
+            <div class="avisos">
+                <i class="bi bi-exclamation-circle-fill" style="color: red;"></i>
+                <strong>Aviso: </strong>
+                <span>
+                    Caso ja tenha feito esta atividade, não tem nenhum problema em repetir todo o processo novamente, isso so irá te ajudar a melhorar ainda mais o seu desempenho, como também vai ajudar a relembrar alguns conceitos. Lembre-se, <strong>a repetição e prática, torna você melhor!</strong>
+                </span>
+            </div>
+            <div class="objetivos">
+                <i class="bi bi-exclamation-circle-fill" style="color: orange;"></i>
+                <strong>Objetivo: </strong>
+                <span>
+                    Entenda as funcionalidades básicas e enviar um e-mail com anexo
+                </span>
+            </div>
+        </section>
+
+        <section class="main">
+            <h3 class="title-atividade">Enviando um E-mail</h3>
+
+            <ul class="instrucoes">
+                <ol>
+                    <li>Clique duas vezes no ícone do <strong>Google Chrome</strong> para abrir o navegador.</li>
+                    <li>Acesse o site do Gmail: Digite "<strong>www.gmail.com</strong>" na barra de endereços e pressione Enter.</li>
+                    <li>Na caixa de entrada, clique em "<strong>Escrever</strong>" (geralmente tem um ícone de lápis).</li>
+                    <li>No campo "<strong>Para</strong>", digite o e-mail de um amigo ou colega (pode ser fictício para fins de exercício).</li>
+                    <li>No campo "<strong>Assunto</strong>", escreva “<strong>Atividade 2 de Internet</strong>”.</li>
+                    <li>No corpo do e-mail, escreva uma mensagem simples, como: “<strong>Olá, este é o meu primeiro e-mail enviado pelo Gmail. Estou aprendendo a usar a ferramenta! também estou enviando um arquivo para você.</strong>”</li>
+                    <li>Para anexar um arquivo, clique no ícone de “<strong>clip</strong>” (anexo) na parte inferior da janela de composição e selecione um arquivo (pode ser uma imagem ou documento que você tenha em seu computador).</li>
+                    <li>Clique em “Enviar” para enviar a mensagem com o arquivo.</li>
+                </ol>
+            </ul>
+        </section>
+
+        <section class="main">
+            <h3 class="title-atividade">Organizando os E-mails</h3>
+
+            <ul class="instrucoes">
+                <ol>
+                    <li>Na sua caixa de entrada, encontre um e-mail e marque-o com uma estrela clicando na estrela ao lado do e-mail.</li>
+                    <li>No lado esquerdo da tela, clique em “Mais” e depois em “<strong>Criar nova etiqueta</strong>” ou "<strong>Cria novo marcador</strong>".</li>
+                    <li>Crie dois marcador: “<strong>Trabalho</strong>” e “<strong>Pessoal</strong>”.</li>
+                    <li>Adicione cada marcador em pelo menos 4 emails diferentes.</li>
+                </ol>
+            </ul>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <section class="footer">
+            <div class="parabens">
+                <span>
+                    Se você finalizou esta atividade com o mímimo de ajuda possível, você está de parabéns! Continue praticando e melhorando.
+                </span>
+            </div>
+        </section>
+
+        <input type="checkbox" name="" id="menuResposta">
+        <label class="iconResposta" for="menuResposta"><i class="ri-file-edit-fill"></i></label>
+        <label class="fecharMenuResposta" for="menuResposta"></label>
+
+        <div class="notepad">
+            <div class="header">
+                <h2>Bloco de Notas</h2>
+                <div>
+                    <button onclick="salvarNota()">Salvar</button>
+                    <button class="clear-button" onclick="limparNota()">Limpar</button>
+                </div>
+            </div>
+            <textarea id="textoNota" placeholder="Escreva suas notas aqui..."></textarea>
+        </div>
+
+    </div>
+
+    <script>
+        function salvarNota() {
+            const texto = document.getElementById('textoNota').value;
+            localStorage.setItem('nota', texto);
+            alert('Nota salva com sucesso!');
+        }
+
+        function limparNota() {
+            document.getElementById('textoNota').value = '';
+            localStorage.removeItem('nota');
+        }
+
+        window.onload = function() {
+            const notaSalva = localStorage.getItem('nota');
+            if (notaSalva) {
+                document.getElementById('textoNota').value = notaSalva;
+            }
+        }
+    </script>
+</body>
+</html>
