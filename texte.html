@@ -1,96 +1,17 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bloco de Notas</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-        }
-        .notepad {
-            width: 80%;
-            max-width: 600px;
-            height: 80vh;
-            background-color: #fff;
-            border: 2px solid #ddd;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
-        }
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .header button {
-            padding: 10px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .header button:hover {
-            background-color: #0056b3;
-        }
-        textarea {
-            width: 100%;
-            height: 100%;
-            border: none;
-            resize: none;
-            font-size: 16px;
-            padding: 10px;
-            box-sizing: border-box;
-            outline: none; /* Remove a borda de seleção */
-        }
-        .header .clear-button {
-            background-color: #dc3545;
-        }
-        .header .clear-button:hover {
-            background-color: #c82333;
-        }
-    </style>
+    <title>Document</title>
 </head>
 <body>
-    <div class="notepad">
-        <div class="header">
-            <h2>Bloco de Notas</h2>
-            <div>
-                <button onclick="salvarNota()">Salvar</button>
-                <button class="clear-button" onclick="limparNota()">Limpar</button>
-            </div>
-        </div>
-        <textarea id="textoNota" placeholder="Escreva suas notas aqui..."></textarea>
-    </div>
-
-    <script>
-        function salvarNota() {
-            const texto = document.getElementById('textoNota').value;
-            localStorage.setItem('nota', texto);
-            alert('Nota salva com sucesso!');
-        }
-
-        function limparNota() {
-            document.getElementById('textoNota').value = '';
-            localStorage.removeItem('nota');
-        }
-
-        window.onload = function() {
-            const notaSalva = localStorage.getItem('nota');
-            if (notaSalva) {
-                document.getElementById('textoNota').value = notaSalva;
-            }
-        }
-    </script>
+    <ul>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+    </ul>
 </body>
 </html>
