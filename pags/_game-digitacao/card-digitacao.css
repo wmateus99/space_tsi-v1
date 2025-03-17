@@ -1,0 +1,62 @@
+.box-right {
+    display: flex;
+    padding-top: 50px;
+    justify-content: center;
+}
+
+.card-digitacao {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: #901f1f; */
+}
+
+.sub-conteiner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 80%;
+    border-radius: 50px 20px;
+    width: 500px;
+    border: 2px solid #fff;
+    background-color: rgb(28, 52, 52);;
+}
+.sub-conteiner input {
+    width: 60%;
+    text-align: center;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 30px;
+}
+
+.word-display {
+    font-size: 30px;
+}
+
+.correct {
+    color: #ff5757 !important;
+}
+
+.button-container {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.button-container button {
+    width: 100px;
+    border: none;
+    height: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: .3s;
+    border-radius: 50px 30px;
+}
+
+.button-container button:hover {
+    background: #d1d1d1;
+    scale: 1.1;
+    border-radius: 30px;
+}
