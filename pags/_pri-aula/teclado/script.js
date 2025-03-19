@@ -13,7 +13,7 @@ const startButton = document.getElementById("start-button");
 const section1 = ["Escola TSI", "paz", "feliz", "futuro", "casa"];
 const section2 = ["Fácil", "Árvore", "Anúncio", "Relógio", "Médio", "Rápido", "Sólido", "Dominó", "Parabéns", "Bíblia"];
 const section3 = ["Ângulo", "Metrô", "Porquê", "Êxito", "Câmbio", "Camelô", "Mateus", "Você", "Judô", "Bambolê"];
-const section4 = ["@@@", "###", ":)", "!!", "$$$", "(-_-)", "&&&", "R$", "¹¹¹  ²²²  ³³³", "Fim!"];
+const section4 = ["@@@", "###", ":)", "!!", "$$$", "(-_-)", "&&&", "R$", "¹¹¹ ²²² ³³³", "Fim!"];
 
 let sections = [section1, section2, section3, section4]; // Array de seções
 let sectionIndex = 0;
