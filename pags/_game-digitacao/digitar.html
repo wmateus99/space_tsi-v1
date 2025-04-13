@@ -3,133 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/img/st-fav.png" type="image/x-icon">
-    <link rel="stylesheet" href="digitacao.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="style.css">
     <title>Jogo de Digitação</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- Adicionar biblioteca html2pdf -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 <body>
-    <div class="container">
-        <section class="box-left">
-            <div class="card-ranking">
-                <div class="card-title">
-                    <h1>Ranking</h1>
-                    <div id="mensagem" style="font-size: 13px;"></div>
-                </div>
-                <div class="box-list-rank">
-                <!-- Rank 1 -->
-                    <div class="list-rank-pessoa">
-                        <h4 class="psa">1ª - Wesley Rafael</h4>
-                        <p class="lv">Nível / 105</p>
-                    </div>
-                    <div class="line-lv"></div>
-                <!-- Rank 2 -->
-                    <div class="list-rank-pessoa">
-                        <h4 class="psa">2ª - Gabriel Pontes</h4>
-                        <p class="lv">Nível / 30</p>
-                    </div>
-                    <div class="line-lv"></div>
-                <!-- Rank 3 -->
-                    <div class="list-rank-pessoa">
-                        <h4 class="psa">2ª - Antonia Sthefany</h4>
-                        <p class="lv">Nível / 26</p>
-                    </div>
-                </div>
-                
-            </div>
+    <!-- YouTube Music Button -->
+    <a href="https://music.youtube.com" target="_blank" class="music-btn" title="Abrir YouTube Music">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" fill="currentColor"/>
+        </svg>
+    </a>
 
-            <div class="card-music">
-                <div class="wrapper">
-                    <div class="details">
-                        <div class="now-playing" style="display: none;">PLAYING x OF y</div>
-                        <div class="track-art"></div>
-                        <div class="track-name">Track Name</div>
-                        <div class="track-artist" style="display: none;">Track Artist</div>
-                    </div>
-                    
-                    
-                    <div class="music-right">
-                        <div class="slider_container-tempo">
-                            <div class="current-time">00:00</div>
-                            <input
-                                type="range"
-                                min="1"
-                                max="100"
-                                value="0"
-                                class="seek_slider"
-                                onchange="seekTo()"
-                            />
-                            <div class="total-duration">00:00</div>
-                        </div>
-                        <!-- Botões -->
-                        <div class="buttons">
-                            <div class="random-track" onclick="randomTrack()">
-                                <i class="fas fa-random fa-2x" title="random"></i>
-                            </div>
-                            <div class="prev-track" onclick="prevTrack()">
-                                <i class="fa fa-step-backward fa-2x"></i>
-                            </div>
-                            <div class="playpause-track" onclick="playpauseTrack()">
-                                <i class="fa fa-play-circle fa-5x"></i>
-                            </div>
-                            <div class="next-track" onclick="nextTrack()">
-                                <i class="fa fa-step-forward fa-2x"></i>
-                            </div>
-                            <div class="repeat-track" onclick="repeatTrack()">
-                                <i class="fa fa-repeat fa-2x" title="repeat"></i>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <div class="slider_container-volume">
-                            <i class="fa fa-volume-down"></i>
-                            <input
-                                type="range"
-                                min="1"
-                                max="100"
-                                value="99"
-                                class="volume_slider"
-                                onchange="setVolume()"
-                            />
-                            <i class="fa fa-volume-up"></i>
-                        </div>
-                    <div id="wave">
-                        <span class="stroke"></span>
-                        <span class="stroke"></span>
-                        <span class="stroke"></span>
-                        <span class="stroke"></span>
-                        <span class="stroke"></span>
-                        <span class="stroke"></span>
-                        <span class="stroke"></span>
-                    </div>
-                </div>
+    <div class="container">
+        <h1>Jogo de Digitação</h1>
+        
+        <!-- Theme Switcher -->
+        <div class="theme-switcher">
+            <div class="theme-option theme-dark" data-theme="dark"></div>
+            <div class="theme-option theme-light" data-theme="light"></div>
+            <div class="theme-option theme-cyan active" data-theme="cyan"></div>
+            <div class="theme-option theme-pink" data-theme="pink"></div>
+            <div class="theme-option theme-green" data-theme="green"></div>
+            <div class="theme-option theme-orange" data-theme="orange"></div>
+        </div>
+        
+        <div class="game-info">
+            <div class="info-item">
+                <span>Nível:</span>
+                <span id="level">1</span>
             </div>
-        </section>
-        <section class="box-right">
-            <div class="card-digitacao">
-                <div class="sub-conteiner">
-                    <h1 id="timer">Jogo de Digitação</h1>
-                    <div id="game-info">
-                        <p><span class="sub-title">Nível:</span> <span id="level">1</span></p>
-                        <p><span class="sub-title">Pontuação:</span> <span id="score">0</span></p>
-                        <p><span class="sub-title">Próximo Nível:</span> <span id="goal">10 pontos</span></p>
-                        <!-- <p id="timer"><span class="sub-title">Tempo:</span> 90s</p> -->
-                    </div>
-                    <div id="word-display" class="word-display"></div>
-                    <input type="text" id="word-input" class="word-input" placeholder="Digite a palavra" autocomplete="off">
-                    <div class="button-container">
-                        <button id="start-button">Iniciar</button>
-                        <button id="pause-button">Pausar</button>
-                    </div>
-                </div>
+            <div class="info-item">
+                <span>Tempo:</span>
+                <span id="time">90</span>s
             </div>
-        </section>
+            <div class="info-item">
+                <span>Pontuação:</span>
+                <span id="score">0</span>
+            </div>
+        </div>
+        
+        <!-- Barra de progresso -->
+        <div class="progress-container">
+            <div id="progress-bar" class="progress-bar"></div>
+        </div>
+        <div class="progress-text">
+            <span id="words-count">0</span>/<span id="words-target">10</span> palavras para o próximo nível
+        </div>
+
+        <div class="game-area">
+            <div id="word-display" class="word-display">Pressione Iniciar</div>
+            <input type="text" id="word-input" class="word-input" autocomplete="off" disabled>
+        </div>
+
+        <div class="controls">
+            <button id="start-btn" class="btn">Iniciar</button>
+            <button id="pause-btn" class="btn" disabled>Pausar</button>
+        </div>
+        
+        <!-- Painel de Ranking com aviso de reset -->
+        <div id="ranking" class="ranking-panel" title="Caso consiga utrapassar alguém do ranking, avise o professor para ele atualizar!"></div>
+        <div class="rank-reset-notice">
+            <span>Ranking reseta em: </span>
+            <span id="reset-countdown" class="countdown-days"></span>
+            <span> dias</span>
+        </div>
     </div>
-    
-    
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="palavras.js"></script>
     <script src="script.js"></script>
-    <script src="./ranking-list/time-rank.js"></script>
-    <script src="music.js"></script>
 </body>
 </html>
