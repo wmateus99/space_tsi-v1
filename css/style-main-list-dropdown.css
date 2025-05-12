@@ -1,0 +1,32 @@
+.list-dropdown-all-style {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-content-list {
+    width: 80%;
+    position: relative;
+    border-radius: 30px;
+    background: linear-gradient(360deg, #166374 0%, #2295af 100%);
+}
+
+.item-list {
+    display: flex;
+    padding: 15px;
+    justify-content: center;
+}
+
+.iconmais {
+    top: 2px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 40px;
+    position: absolute;
+}
+.iconwindows {
+    top: 2px;
+    left: 15px;
+    font-size: 40px;
+    position: absolute;
+}

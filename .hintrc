@@ -1,0 +1,22 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "axe/text-alternatives": [
+      "default",
+      {
+        "image-alt": "off"
+      }
+    ]
+  },
+  "browserslist": [
+    "defaults",
+    "not ie 11",
+    "not and_ff <= 135",
+    "not chrome <= 109",
+    "not firefox <= 135",
+    "not ios_saf <= 18.3",
+    "not safari <= 18.3"
+  ]
+}
